@@ -25,6 +25,15 @@ header{
     justify-content: center;
 }
 
+#menuContent{
+    display: flex;
+    grid-column: 1/2;
+    background-color: rgb(34, 57, 127);
+    color: white;
+    justify-content: center;
+    height: 300%;
+}
+
 #content{
     display: flex;
     grid-column: 2/5;
@@ -32,6 +41,28 @@ header{
     align-items: center;
     margin-top: 2%;
     flex-wrap: wrap;
+    background-color: rgb(224, 224, 224);	
+}
+
+#contentPage{
+    display: flex;
+    grid-column: 2/5;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    height: 300%;
+    background-color: rgb(224, 224, 224);	
+}
+
+#contentPage2{
+    display: flex;
+    grid-column: 2/5;
+    justify-content: center;
+    align-content: flex-start;
+    margin-top: 2%;
+    flex-wrap: wrap;
+    background-color: rgb(224, 224, 224);	
 }
 
 .item{
@@ -57,4 +88,12 @@ a:visited{
 
 a{
 	color: black;
+}
+
+footer{
+    display: flex;
+    grid-column: 1/5;
+    color: white;
+    background-color: rgb(34, 57, 127);
+    justify-content: center;
 }
