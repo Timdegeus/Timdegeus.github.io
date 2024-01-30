@@ -56,6 +56,8 @@ nav a :hover{
     background-position: left top;
     background-size: cover;
     background-repeat: no-repeat;
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
 a:link{
@@ -135,5 +137,10 @@ li a:hover{
 
 #selectedNav {
     color: #332424;
+}
+
+#divWidth {
+    display: flex;
+    width: 80%;
 }
 
