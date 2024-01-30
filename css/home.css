@@ -1,0 +1,93 @@
+body{
+    font-family: 'League Spartan';
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+    background-image: url("../img/videoblocks-network-on-a-black-background-cinematic-plexus-background-seamless-loop_hagskxz4rm_thumbnail-full01.png");
+    background-position: left top;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+#container{
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);	
+}
+
+header{
+    display: flex;
+    grid-column: 1/4;
+    justify-content: left;
+    padding-left: 200px;
+    background-color: rgb(74, 74, 74);
+    color: white;
+}
+
+nav{
+    display: flex;
+    grid-column: 4/7;
+    background-color:rgb(74, 74, 74);
+    align-items: center;
+    justify-content: right;
+    padding-right: 200px;
+    font-size: 1.2em;
+    color: white;
+}
+
+nav a{
+    color: white;
+    padding: 5px;
+    margin-left: 5px;
+}
+
+nav a :hover{
+    color: rgb(59, 60, 69);
+}
+
+a:link{
+	text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+#content{
+    display: flex;
+    grid-column: 2/6;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    height: 75vh;
+}
+
+#contentH1{
+    font-size: 5em;
+    color: white;
+    margin: 0;
+}
+#contentH2{
+    font-size: 3em;
+    color: white;
+}
+
+button {
+    background-color: rgb(74, 74, 74);
+    font-size: 1.5em;
+    font-family: 'League Spartan';
+    width: 25vh;
+    height: 5vh;
+    border-radius: 1vh;
+    color: white;
+    border-style: none;
+}
+
+button:hover {
+    border-style: solid;
+    background-color: rgb(75, 75, 75);
+}
+
+#selected {
+    text-decoration: underline;
+}
