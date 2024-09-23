@@ -1,0 +1,411 @@
+html,body {
+    margin: 0;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+#content {
+    display: flex;
+}
+
+#blok1 {
+    width: 270px;
+    background-color: #FFFFFF;
+    height: 100vh;
+    z-index: 10;
+    border-right: 2px solid #F5F6FA;
+}
+
+#blok2 {
+    width: 90%;
+    background-color: #F5F6FA;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 7vh;
+    background-color: #FFFFFF;
+    border-bottom: #7E84A3 3px;
+}
+
+.headerContent {
+    display: flex;
+    align-items: center;
+    min-height: 100%;
+    z-index: 1;
+}
+
+.header h6 {
+    margin: 0;
+    margin-left: 5px;
+}
+
+.headerIcon {
+    font-size: 1.4em;
+    margin-left: 18px;
+    margin-right: 15px;
+}
+
+.dropdownContent {
+    display: flex;
+    background-color: #ffffff;
+    border-radius:  0 0 10px 10px;
+    transition: all .2s ease-out;
+  }
+
+.dropdownContent a {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-left: 10px;
+    border-radius: 5px;
+ }
+
+ .dropdownContent i {
+    margin: 0;
+    margin-right: 5px;
+    font-size: .4em;
+    display: none;
+ }
+
+.dropdownContent a:hover {
+    text-decoration: none;
+    background-color: rgba(0, 88, 255, 0.08);
+}
+
+.dropdownButton {
+    display: none;
+    border: none;
+    background-color: white;
+    color: #7E84A3;
+    padding-left: 5px;
+    font-size: .8em;
+}
+
+.show {
+    max-height: 200px !important;
+    overflow: visible !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+li a {
+    display: flex;
+    color: #000000;
+}
+
+li i {
+    color: #0058FF;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;   
+    margin-right: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+nav a {
+    align-items: center;
+    width: 100%;
+    padding: 13px;
+    padding-left: 20px;
+}
+
+nav h5 {
+    margin: 0;
+}
+
+#logo {
+    font-size: 1.6em;
+    margin-left: 15px;
+}
+
+.activeNav {
+    background-color: rgba(0, 88, 255, 0.08);
+}
+
+.activeNav a {
+    color: #0058FF;
+}
+
+.activeNav i {
+    color: #0058FF;
+}
+
+#popUpNav {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 7%;
+    max-height: 0px;
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border-radius: 25px 25px 0 0;
+    z-index: 1;
+    transition: all .2s ease-out;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.openNav {
+    max-height: 650px !important;
+    padding-top: 20px;   
+    padding-bottom: 20px; 
+}
+
+#popUpNav h5 {
+    margin: 0px;
+}
+
+#popUpNav i {
+    margin-right: 8px;
+}
+
+#popUpNav ul {
+    margin: 0;
+}
+
+#popUpNav li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 3px;   
+    padding-left: 15px;
+    border-radius: 8px;
+}
+
+#popUpNav li a {
+    width: 100%;
+}
+
+#popUpNav label {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.activePopUp {
+    background-color: rgba(0, 88, 255, 0.08);
+}
+
+.activePopUp h5 {
+    font-weight: bold;
+    color: #0058FF;
+}
+
+li:hover {
+    background-color: rgba(0, 88, 255, 0.08);
+}
+
+.selected {
+    background-color: rgba(0, 88, 255, 0.08);
+}
+
+.selected i {
+    color: #0058FF;
+}
+
+.selectedDropdown {
+    color: #0058FF;
+}
+
+li a:hover {
+    text-decoration: none;
+    color: #131523;
+}
+
+.pageTitle {
+    align-items: center;
+    padding: 13px;
+    padding-left: 20px;
+}
+
+.subMenuTitle {
+    margin: 0;
+    font-size: .9em;
+    text-decoration: none;
+}
+
+.subMenu {
+    width: 100%;
+    max-height: 0px;
+    color: #131523;
+    font-weight: 400;
+    overflow: hidden;
+    transition: max-height .1s ease-in-out;
+}
+
+.selectedSubmenu i {
+    color: #0058FF !important;
+}
+
+.selectedSubmenu {
+    color: #0058FF;
+}
+
+.subMenu i {
+    margin-top: 9px;
+    margin-right: 18px;
+    font-size: .4em;
+    color: #131523;
+}
+
+.open {
+    max-height: 200px;
+}
+
+.black {
+    color: #131523;
+}
+
+.gray {
+    color: #131523;
+}
+
+.blue {
+    color: #0058FF;
+}
+
+.hide {
+    display: flex;
+}
+
+.checkbutton {
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#agriCheck {
+    display: none;
+}
+
+#devicesCheck {
+    display: none;
+}
+
+#analyseCheck {
+    display: none;
+}
+
+#alarmsCheck {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    #content {
+        display: block;
+    }
+
+    #blok1 {
+        height: 7vh; 
+        width: 100%;
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        position: fixed;
+        bottom: 0;
+        border-right: 0;
+        border-top: 2px solid #F5F6FA;
+    }
+
+    #blok2 {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: flex;
+        margin: 0;
+        justify-content: space-evenly;
+        padding-top: 15px;
+    }
+
+    nav ul li {
+        margin: 0;
+    }
+
+    nav i {
+        color: #7E84A3;
+    }
+
+    nav h5 {
+        display: none;
+    }
+
+    #logo {
+        display: none;  
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .activeNav {
+        background-color: transparent;
+    }
+
+    .checkbutton {
+        display: block;
+    } 
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .headerContent {
+        justify-content: center;
+    }
+
+    .dropdownButton {
+        display: block;
+    }
+
+    .dropdownContent {
+        display: block;
+        justify-content: center;
+        flex-direction: column;
+        overflow: hidden;
+        border-top: 2px solid #F5F6FA;
+        max-height: 0px;
+        width: 100%;
+    }
+
+    .dropdownContent i {
+        display: block;
+    }
+
+    .selectedDropdown {
+        background-color: rgba(0, 88, 255, 0.08);
+    }
+}
+
+
+
+
+
