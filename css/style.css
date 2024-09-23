@@ -150,7 +150,7 @@ nav h5 {
 
 #popUpNav {
     display: block;
-    position: absolute;
+    position: fixed;
     width: 100%;
     bottom: 7%;
     max-height: 0px;
