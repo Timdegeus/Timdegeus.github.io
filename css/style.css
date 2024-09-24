@@ -62,7 +62,6 @@ html,body {
     border-radius:  0 0 10px 10px;
     transition: all .2s ease-out;
     z-index: 1;
-    border-bottom: 2px solid #F5F6FA;
   }
 
 .dropdownContent a {
@@ -339,14 +338,16 @@ li a:hover {
     }
 
     nav {
+        display: flex;
+        height: 60px;
         width: 100%;
+        align-content: center;
     }
 
     nav ul {
         display: flex;
         margin: 0;
         justify-content: space-evenly;
-        padding-top: 15px;
     }
 
     nav ul li {
@@ -398,6 +399,7 @@ li a:hover {
         border-top: 2px solid #F5F6FA;
         max-height: 0px;
         width: 100%;
+        border-bottom: 2px solid #F5F6FA;
     }
 
     .dropdownContent i {
