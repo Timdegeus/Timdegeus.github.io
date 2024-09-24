@@ -168,7 +168,7 @@ nav h5 {
 .openNav {
     max-height: 650px !important;
     padding-top: 20px;   
-    padding-bottom: 20px; 
+    padding-bottom: 15px; 
 }
 
 #popUpNav h5 {
@@ -187,7 +187,7 @@ nav h5 {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    margin-bottom: 3px;   
+    margin-bottom: 1px;   
     padding-left: 15px;
     border-radius: 8px;
 }
@@ -236,7 +236,7 @@ li a:hover {
 
 .pageTitle {
     align-items: center;
-    padding: 13px;
+    padding: 10px;
     padding-left: 20px;
 }
 
