@@ -317,6 +317,10 @@ li a:hover {
 }
 
 @media screen and (max-width: 767px) {
+    #content {
+        display: block;
+    }
+
     nav {
         height: fit-content;
         width: 100%;
