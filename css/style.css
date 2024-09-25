@@ -1,4 +1,4 @@
-html,body {
+body {
     margin: 0;
     background-color: #F5F6FA;
 }
@@ -15,12 +15,32 @@ html,body {
     display: flex;
 }
 
-#blok1 {
-    width: 270px;
+nav {
+    width: max-content;
     background-color: #FFFFFF;
     height: 100vh;
     z-index: 10;
     border-right: 2px solid #F5F6FA;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3px;   
+    margin-right: 20px;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+nav a {
+    align-items: center;
+    width: 100%;
+    padding: 13px;
+    padding-left: 20px;
+}
+
+nav h5 {
+    margin: 0;
 }
 
 #blok2 {
@@ -111,26 +131,6 @@ li a {
 
 li i {
     color: #0058FF;
-}
-
-nav li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3px;   
-    margin-right: 20px;
-    border-radius: 8px;
-    margin-left: 20px;
-}
-
-nav a {
-    align-items: center;
-    width: 100%;
-    padding: 13px;
-    padding-left: 20px;
-}
-
-nav h5 {
-    margin: 0;
 }
 
 #logo {
@@ -317,7 +317,7 @@ li a:hover {
 }
 
 @media screen and (max-width: 767px) {
-    #blok1 {
+    nav {
         height: fit-content;
         width: 100%;
         display: flex;  
@@ -327,17 +327,12 @@ li a:hover {
         bottom: 0;
         border-right: 0;
         border-top: 2px solid #F5F6FA;
+        height: 60px;
+        align-content: center;
     }
 
     #blok2 {
         width: 100%;
-    }
-
-    nav {
-        display: flex;
-        height: 60px;
-        width: 100%;
-        align-content: center;
     }
 
     nav ul {
