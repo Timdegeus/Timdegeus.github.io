@@ -339,6 +339,10 @@ li a:hover {
         width: 100%;
     }
 
+    #pageContent {
+        padding-top: 9%;
+    }
+
     nav ul {
         display: flex;
         margin: 0;
@@ -375,8 +379,8 @@ li a:hover {
 
     .header {
         flex-direction: column;
+        position: absolute;
         align-items: flex-start;
-
     }
 
     .headerContent {
