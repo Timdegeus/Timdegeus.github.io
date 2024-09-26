@@ -437,16 +437,25 @@ li a:hover {
     padding: 10px;
     margin: 20px;
     border-radius: 5px;
+    padding: 15px;
 }
 
 .widget h4 {
     margin: 0;
-    margin: 15px;
 }
 
 .widget i {
     color: #0058FF;
     margin-right: 5px;
+}
+
+.widget img {
+    max-width: 100%;
+    height: auto;
+}
+
+.widget p {
+    margin: 0;
 }
 
 
