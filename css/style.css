@@ -318,7 +318,7 @@ li a:hover {
 
 @media screen and (max-width: 767px) {
     #content {
-        display: block;
+        display: flex;
     }
 
     nav {
