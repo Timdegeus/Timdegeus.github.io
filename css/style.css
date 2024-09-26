@@ -408,15 +408,45 @@ li a:hover {
     }
 }
 
+.contentChanger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+    height: 30px;
+}
+
+#teeltSelector {
+    width: 170px;
+}
+
+.refreshCheck {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #0058FF;
+}
+
+.contentChanger p {
+    margin: 0;
+    margin-left: 5px;
+}
+
 .widget {
     background-color: white;
     padding: 10px;
-    margin: 10px;
-    border-radius: 10px;
+    margin: 20px;
+    border-radius: 5px;
 }
 
-.widget h1 {
+.widget h4 {
     margin: 0;
+    margin: 15px;
+}
+
+.widget i {
+    color: #0058FF;
+    margin-right: 5px;
 }
 
 
