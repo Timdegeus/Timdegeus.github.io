@@ -19,6 +19,7 @@ html, body {
 nav {
     width: max-content;
     background-color: #FFFFFF;
+    position: relative;
     height: 100vh;
     z-index: 10;
     border-right: 2px solid #F5F6FA;
@@ -317,6 +318,66 @@ li a:hover {
     display: none;
 }
 
+.contentChanger {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    height: 30px;
+    background-color: white;
+    border-top: 2px solid #F5F6FA;
+}
+
+#teeltSelector {
+    width: 170px;
+    margin-right: 20px;
+}
+
+.refreshCheck {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #0058FF;
+}
+
+.contentChanger p {
+    margin: 0;
+    margin-left: 5px;
+}
+
+.widgetContent {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.widget {
+    background-color: white;
+    max-width: 500px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.widget h4 {
+    margin: 0;
+}
+
+.widget i {
+    color: #0058FF;
+    margin-right: 5px;
+}
+
+.widget img {
+    max-width: 100%;
+    height: auto;
+}
+
+.widget p {
+    margin: 0;
+}
+
 @media screen and (max-width: 767px) {
     nav {
         height: fit-content;
@@ -406,57 +467,20 @@ li a:hover {
     .selectedDropdown {
         background-color: rgba(0, 88, 255, 0.08);
     }
+
+    .contentChanger {
+        justify-content: space-between;
+        background-color: transparent;
+    }
+
+    .widget {
+        min-width: fit-content;
+    }
 }
 
-.contentChanger {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
-    height: 30px;
-}
 
-#teeltSelector {
-    width: 170px;
-}
 
-.refreshCheck {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    color: #0058FF;
-}
 
-.contentChanger p {
-    margin: 0;
-    margin-left: 5px;
-}
-
-.widget {
-    background-color: white;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 5px;
-    padding: 15px;
-}
-
-.widget h4 {
-    margin: 0;
-}
-
-.widget i {
-    color: #0058FF;
-    margin-right: 5px;
-}
-
-.widget img {
-    max-width: 100%;
-    height: auto;
-}
-
-.widget p {
-    margin: 0;
-}
 
 
 
