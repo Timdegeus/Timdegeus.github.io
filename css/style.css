@@ -17,7 +17,9 @@ html, body {
 }
 
 nav {
-    width: max-content;
+    width: 20%;
+    min-width: 230px;
+    max-width: 270px;
     background-color: #FFFFFF;
     position: relative;
     height: 100vh;
@@ -39,6 +41,10 @@ nav a {
     width: 100%;
     padding: 13px;
     padding-left: 20px;
+}
+
+nav ul li i {
+    margin-right: 10px;
 }
 
 nav h5 {
@@ -137,7 +143,9 @@ li i {
 
 #logo {
     font-size: 1.6em;
-    margin-left: 15px;
+    margin-left: 19px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .activeNav {
@@ -387,10 +395,41 @@ li a:hover {
     margin: 0;
 }
 
+.userInfo {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    position: absolute;
+    bottom: 0;
+    line-height: 15px;
+}
+
+.userInfo p {
+    margin: 0;
+    font-size: .9em;
+}
+
+.userInfo img {
+    max-width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.name {
+    margin-right: 10%;
+}
+
+.role {
+    color: #7E84A3;
+    font-size: 0.8em !important;
+}
+
 @media screen and (max-width: 767px) {
     nav {
-        height: fit-content;
         width: 100%;
+        max-width: 100%;
         display: flex;  
         justify-content: center;  
         align-items: center;  
@@ -429,7 +468,7 @@ li a:hover {
     }
 
     #logo {
-        display: none;  
+        display: none; 
     }
 
     .hide {
@@ -497,6 +536,10 @@ li a:hover {
 
     .marginRight {
         margin-right: 0px;
+    }
+
+    .userInfo {
+        display: none;
     }
 }
 
