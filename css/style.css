@@ -348,16 +348,25 @@ li a:hover {
 .widgetContent {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding: 20px;
 }
 
+.marginLeft {
+    margin-left: 10px;
+}
+
+.marginRight {
+    margin-right: 10px;
+}
+
+
 .widget {
     background-color: white;
-    max-width: 500px;
+    max-width: 50%;
     border-radius: 5px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .widget h4 {
@@ -475,6 +484,19 @@ li a:hover {
 
     .widget {
         min-width: fit-content;
+        margin-bottom: 20px;
+    }
+
+    .widgetContent {
+        flex-wrap: wrap;
+    }
+
+    .marginLeft {
+        margin-left: 0px;
+    }
+
+    .marginRight {
+        margin-right: 0px;
     }
 }
 
