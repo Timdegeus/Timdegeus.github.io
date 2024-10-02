@@ -237,7 +237,7 @@ li:hover {
 }
 
 .selectedDropdown {
-    color: #0058FF;
+    color: #0058FF !important;
 }
 
 li a:hover {
