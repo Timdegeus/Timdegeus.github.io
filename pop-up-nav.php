@@ -3,71 +3,50 @@
     {
         if(str_contains($_SESSION['page'], $fileName))
         {
-            echo "activePopUp";
+            echo "activePopUp ";
+        }
+    }
+
+    function setActiveSubmenu($fileName)
+    {
+        if (str_contains($_SESSION['page'], $fileName))
+        {
+            echo "selectedSubmenu";
         }
     }
 ?>
 
 <div id="popUpNav">
     <ul>
-        <li class="<?php setActivePopUpMenuPage('index.php'); ?>" id="dashboard">
-            <a href="index.php" class="pageTitle"><i class="fa-solid fa-layer-group"></i><h5>Dashboard</h5></a>
-        </li>
-        <li class="<?php setActivePopUpMenuPage('agri'); ?>" id="agri">
-            <input type="checkbox" id="agriCheck" onclick="showSubMenu('agriCheck' ,'agri', 'agriSub')">
-            <label for="agriCheck" class="checkbutton pageTitle">
-                <h5><i class="fa-solid fa-seedling"></i>Agri</h5>
-                <i class="fa-solid fa-chevron-down gray"></i>
-            </label>
-            <ul class="subMenu " id="agriSub">
-                <li><a href="agriClimate.php" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Climate</a></li>
-                <li><a href="#" class="subMenuTitle selectedSubmenu"><i class="fa-solid fa-circle"></i>Homogenity</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Weight</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Soil</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Light</a></li>
-            </ul>
-        </li>
-        <li class="<?php setActivePopUpMenuPage('devices'); ?>" id="devices">
-            <input type="checkbox" id="devicesCheck" onclick="showSubMenu('devicesCheck' ,'devices', 'devicesSub')">
-            <label for="devicesCheck" class="checkbutton pageTitle">
-                <h5><i class="fa-solid fa-tower-cell"></i>Devices</h5>
-                <i class="fa-solid fa-chevron-down gray"></i>
-            </label>
-            <ul class="subMenu " id="devicesSub">
-                <li><a href="devicesCards.php" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Cards</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>List</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Maps</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Connections</a></li>
-            </ul>
-        </li>
-        <li class="<?php setActivePopUpMenuPage('analyse'); ?>" id="analyse">
-            <input type="checkbox" id="analyseCheck" onclick="showSubMenu('analyseCheck' ,'analyse', 'analyseSub')">
-            <label for="analyseCheck" class="checkbutton pageTitle">
-                <h5><i class="fa-solid fa-chart-simple"></i>Analyse</h5>
-                <i class="fa-solid fa-chevron-down gray"></i>
-            </label>
-            <ul class="subMenu " id="analyseSub">
-                <li><a href="analyseGraph.php" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Graph</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>List</a></li>
-            </ul>
-        </li>
-        <li class="<?php setActivePopUpMenuPage('alarms'); ?>" id="alarms">
-            <input type="checkbox" id="alarmsCheck" onclick="showSubMenu('alarmsCheck' ,'alarms', 'alarmsSub')">
-            <label for="alarmsCheck" class="checkbutton pageTitle">
-                <h5><i class="fa-solid fa-bell"></i>Alarms</h5>
-                <i class="fa-solid fa-chevron-down gray"></i>
-            </label>
-            <ul class="subMenu " id="alarmsSub">
-                <li><a href="alarmsAlarms.php" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Alarms</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Logbook</a></li>
-                <li><a href="#" class="subMenuTitle"><i class="fa-solid fa-circle"></i>Settings</a></li>
-            </ul>
-        </li>
-        <li class="<?php setActivePopUpMenuPage('control.php'); ?>" id="reports">
-            <a href="control.php" class="pageTitle"><i class="fa-solid fa-display"></i></i><h5>Control Room</h5></a>
-        </li>
-        <li class="<?php setActivePopUpMenuPage('settings.php'); ?>" id="settings">
-            <a href="settings.php" class="pageTitle"><i class="fa-solid fa-gear"></i><h5>Settings</h5></a>
-        </li>   
+        <?php
+            foreach ($menuItems as $menuItem)
+            {
+                if ($menuItem["Submenu"] == null)
+                {
+                    ?><li class="<?php setActivePopUpMenuPage($menuItem["Link"]); ?>" id="<?php echo $menuItem["Name"]; ?>">
+                        <a href="<?php echo $menuItem["Link"]; ?>" class="pageTitle"><i class="<?php echo $menuItem["Icon"]; ?>"></i></i><h5><?php echo $menuItem["Name"]; ?></h5></a>
+                    </li><?php
+                }
+                else
+                {
+                    ?><li class="<?php setActivePopUpMenuPage($menuItem["Link"]); ?>" id="<?php echo $menuItem["Name"]; ?>">
+                        <input type="checkbox" class="hide" id="<?php echo $menuItem["Name"] . "Check"; ?>" onclick="showSubMenu('<?php echo $menuItem['Name'] . 'Check'; ?>', '<?php echo $menuItem['Name']; ?>', '<?php echo $menuItem['Name'] . 'Sub'; ?>')">
+                        <script>setDropdownButtons("<?php echo $menuItem['Name'] . "Check"; ?>");</script>
+                        <label for="<?php echo $menuItem["Name"] . "Check"; ?>" class="checkbutton pageTitle">
+                            <h5><i class="<?php echo $menuItem["Icon"]; ?>"></i><?php echo $menuItem["Name"]; ?></h5>
+                            <i class="fa-solid fa-chevron-down gray"></i>
+                        </label>
+                        <ul class="subMenu " id="<?php echo $menuItem["Name"] . "Sub"; ?>">
+                            <?php
+                                foreach ($menuItem["Submenu"] as $subMenu)
+                                {
+                                    ?><li><a href="<?php echo $subMenu["Link"]; ?>" class="subMenuTitle <?php setActiveSubmenu($subMenu["Link"]); ?>"><i class="fa-solid fa-circle"></i><?php echo $subMenu["Name"]; ?></a></li><?php
+                                }
+                            ?>
+                        </ul>
+                    </li><?php
+                }
+            }
+        ?>
     </ul>
 </div>

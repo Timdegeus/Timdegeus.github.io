@@ -1,16 +1,16 @@
-const menuButton = document.getElementById("check");
-const menuIcon = document.getElementById("menuIcon");
-const popUpNav = document.getElementById("popUpNav");
+const dropdownButtons = [];
 
-const agriButton = document.getElementById("agriCheck");
-const devicesButton = document.getElementById("devicesCheck");
-const analyseButton = document.getElementById("analyseCheck");
-const alarmsButton = document.getElementById("alarmsCheck");
-
-const dropdownButtons = [agriButton, devicesButton, analyseButton, alarmsButton];
+function setDropdownButtons(button)
+{
+    dropdownButtons.push(document.getElementById(button));
+}
 
 function showNavbar() 
 {
+    const menuButton = document.getElementById("check");
+    const menuIcon = document.getElementById("menuIcon");
+    const popUpNav = document.getElementById("popUpNav");
+
     if (menuButton.checked) 
     {
         popUpNav.classList.add("openNav");
@@ -33,7 +33,7 @@ function showSubMenu(pressedButton, pageTitle, subList)
         if (button.checked && button != document.getElementById(pressedButton)) 
         {
             button.parentElement.classList.remove("selected");
-            button.nextElementSibling.nextElementSibling.classList.remove("open");
+            button.nextElementSibling.nextElementSibling.nextElementSibling.classList.remove("open");
             button.checked = false;
         }
 
@@ -63,6 +63,8 @@ function showDropdown() {
 }
   
 window.onclick = function(event) {
+    const menuButton = document.getElementById("check");
+
     if (!event.target.matches('.dropdownButton')) {
         var dropdowns = document.getElementsByClassName("dropdownContent");
         var i;

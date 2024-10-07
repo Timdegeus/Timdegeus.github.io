@@ -297,8 +297,16 @@ li a:hover {
     color: #0058FF;
 }
 
-.hide {
+.mobile {
     display: flex;
+}
+
+.desktop {
+    display: none;
+}
+
+.hide {
+    display: none;
 }
 
 .checkbutton {
@@ -471,8 +479,12 @@ li a:hover {
         display: none; 
     }
 
-    .hide {
+    .mobile {
         display: none;
+    }
+
+    .desktop {
+        display: flex;
     }
 
     .activeNav {
